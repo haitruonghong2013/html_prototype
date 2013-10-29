@@ -771,72 +771,78 @@
             errorElement: 'span',
             errorClass: 'help-inline',
             focusInvalid: false ,
-//            rules: {
-//                user_email: {
-//                    required: true,
-//                    email:true
-//                },
-//                user_password: {
-//                    required: true,
-//                    minlength: 8
-//                },
-//                user_password_confirmation: {
-//                    required: true,
-//                    minlength: 8,
-//                    equalTo: "#user_password"
-//                },
-//                name: {
-//                    required: true
-//                },
-//                phone: {
-//                    required: true,
-//                    phone: 'required'
-//                }
-//            },
+            rules: {
+                "user[firstname]":{
+                    required: true
+                },
+                "user[email]": {
+                    required: true,
+                    email:true
+                },
+                "user[password]": {
+                    required: true,
+                    minlength: 8
+                },
+                "user[password_confirmation]": {
+                    required: true,
+                    minlength: 8,
+                    equalTo: "#user_password"
+                },
+                name: {
+                    required: true
+                },
+                phone: {
+                    required: true,
+                    phone: 'required'
+                }
+            },
 
-//            messages: {
-//                email: {
-////                    required: "Please provide a valid email.",
-//                    email: "is invalid"
+            messages: {
+//                "user[firstname]":{
+//                    required: "aaaaaaaaaaaaaaaaaaa"
 //                },
-//                password: {
-//                    required: "Please specify a password.",
-//                    minlength: "is too short (minimum is 8 characters)"
-//                }
-//            },
+                "user[email]": {
+                    required: "Please provide a valid email.",
+                    email: "is invalid"
+                },
+                password: {
+                    required: "Please specify a password.",
+                    minlength: "is too short (minimum is 8 characters)"
+                }
+            },
 //
             invalidHandler: function (event, validator) { //display error alert on form submit
                 $('.alert-error', $('.login-form')).show();
+            },
+
+            highlight: function (e) {
+                $(e).closest('.control-group').removeClass('info').addClass('error');
+            },
+
+            success: function (e) {
+                $(e).closest('.control-group').removeClass('error').addClass('info');
+                $(e).remove();
+            },
+
+            errorPlacement: function (error, element) {
+                if(element.is(':checkbox') || element.is(':radio')) {
+                    var controls = element.closest('.controls');
+                    if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
+                    else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+                }
+                else if(element.is('.select2')) {
+                    error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+                }
+                else if(element.is('.chzn-select')) {
+                    error.insertAfter(element.siblings('[class*="chzn-container"]:eq(0)'));
+                }
+                else error.insertAfter(element);
+            },
+
+            submitHandler: function (form) {
+            },
+            invalidHandler: function (form) {
             }
-
-//            highlight: function (e) {
-//                $(e).closest('.control-group').removeClass('info').addClass('error');
-//            }
-
-//            success: function (e) {
-//                $(e).closest('.control-group').removeClass('error').addClass('info');
-//                $(e).remove();
-//            },
-//
-//            errorPlacement: function (error, element) {
-//                if(element.is(':checkbox') || element.is(':radio')) {
-//                    var controls = element.closest('.controls');
-//                    if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
-//                    else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
-//                }
-//                else if(element.is('.select2')) {
-//                    error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
-//                }
-//                else if(element.is('.chzn-select')) {
-//                    error.insertAfter(element.siblings('[class*="chzn-container"]:eq(0)'));
-//                }
-//                else error.insertAfter(element);
-//            },
-//
-//            submitHandler: function (form) {
-//            },
-//            invalidHandler: function (form) {
-//            }
         });
     })
 </script>

@@ -4,14 +4,16 @@
     <list default="true" id="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" name="Default" comment="" />
     <ignored path="html_prototype.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382950350647" ignored="false" />
+    <file path="/index.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383036101526" ignored="false" />
     <file path="/Dummy.txt" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382933081957" ignored="false" />
     <file path="/list_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382947777140" ignored="false" />
     <file path="$PROJECT_DIR$/../../ipadapp/app/controllers/application_controller.rb" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382936404925" ignored="false" />
     <file path="/login.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382947313363" ignored="false" />
     <file path="/new_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383035020095" ignored="false" />
-    <file path="/edit_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382948954741" ignored="false" />
+    <file path="/edit_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383035715625" ignored="false" />
     <file path="$PROJECT_DIR$/../../ipadapp/app/views/users/_form.html.erb" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382953582102" ignored="false" />
+    <file path="/list_clients.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383036407341" ignored="false" />
+    <file path="/new_client.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383038991874" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new_user.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new_user.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/new_user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="136" selection-start="542" selection-end="542" vertical-scroll-proportion="0.38659793">
+            <state line="595" column="79" selection-start="19699" selection-end="19713" vertical-scroll-proportion="-2.391892">
               <folding>
                 <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -45,12 +47,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form-wizard.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/form-wizard.html">
+      <file leaf-file-name="list_clients.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/list_clients.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="755" column="104" selection-start="20816" selection-end="20816" vertical-scroll-proportion="-0.625">
+            <state line="525" column="52" selection-start="17168" selection-end="17168" vertical-scroll-proportion="26.702703">
               <folding>
-                <marker date="1382953994482" expanded="true" signature="35420:35528" placeholder="..." />
+                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1383036407723" expanded="true" signature="28480:28588" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_client.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/new_client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1130" column="32" selection-start="40739" selection-end="40739" vertical-scroll-proportion="0.4793233">
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1383039212587" expanded="true" signature="38730:38845" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_users.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/list_users.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="603" column="87" selection-start="22447" selection-end="22447" vertical-scroll-proportion="-11.875">
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1382950366830" expanded="true" signature="29509:29617" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="100" selection-start="462" selection-end="462" vertical-scroll-proportion="-8.75">
+              <folding>
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1383036110491" expanded="true" signature="57175:57283" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -71,11 +117,13 @@
         <option value="$PROJECT_DIR$/public/tables.html" />
         <option value="$PROJECT_DIR$/public/login.html" />
         <option value="$PROJECT_DIR$/public/assets/css/application.css" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/list_user.html" />
-        <option value="$PROJECT_DIR$/public/edit_user.html" />
         <option value="$PROJECT_DIR$/public/form-wizard.html" />
         <option value="$PROJECT_DIR$/public/new_user.html" />
+        <option value="$PROJECT_DIR$/public/edit_user.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/list_clients.html" />
+        <option value="$PROJECT_DIR$/public/new_client.html" />
       </list>
     </option>
   </component>
@@ -134,6 +182,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="html_prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html_prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html_prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html_prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html_prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,13 +521,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.6702786" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.71826625" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.71826625" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -527,27 +603,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/new_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383035045355" expanded="true" signature="25908:26023" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/form-wizard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="755" column="104" selection-start="20816" selection-end="20816" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1382953994482" expanded="true" signature="35420:35528" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/layout/_navigation_bar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="70" selection-start="180" selection-end="180" vertical-scroll-proportion="0.1764706" />
@@ -562,7 +617,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/jquery_ujs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0" />
+        <state line="17" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/application.css">
@@ -579,25 +636,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/edit_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="48" selection-start="759" selection-end="759" vertical-scroll-proportion="0.90225565">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/tables.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="715" column="54" selection-start="18672" selection-end="18672" vertical-scroll-proportion="0.82808024" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/list_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="67" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.48424068" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/login.html">
@@ -605,28 +646,96 @@
         <state line="110" column="66" selection-start="4327" selection-end="4327" vertical-scroll-proportion="0.8270677" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="67" selection-start="995" selection-end="995" vertical-scroll-proportion="0.21776505" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/form-wizard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="755" column="104" selection-start="20816" selection-end="20816" vertical-scroll-proportion="-0.625">
+        <state line="755" column="104" selection-start="20816" selection-end="20816" vertical-scroll-proportion="0.025773196">
           <folding>
-            <marker date="1382953994482" expanded="true" signature="35420:35528" placeholder="..." />
+            <marker date="1382953994482" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/edit_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="531" column="85" selection-start="14621" selection-end="14621" vertical-scroll-proportion="14.825188">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383035715431" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resize.colorbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="100" selection-start="462" selection-end="462" vertical-scroll-proportion="-8.75">
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383036110491" expanded="true" signature="57175:57283" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/list_users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="603" column="87" selection-start="22447" selection-end="22447" vertical-scroll-proportion="-11.875">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1382950366830" expanded="true" signature="29509:29617" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/new_user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="136" selection-start="542" selection-end="542" vertical-scroll-proportion="0.38659793">
+        <state line="595" column="79" selection-start="19699" selection-end="19713" vertical-scroll-proportion="-2.391892">
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1383035045355" expanded="true" signature="25908:26023" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/list_clients.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="525" column="52" selection-start="17168" selection-end="17168" vertical-scroll-proportion="26.702703">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383036407723" expanded="true" signature="28480:28588" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/new_client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1130" column="32" selection-start="40739" selection-end="40739" vertical-scroll-proportion="0.4793233">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383039212587" expanded="true" signature="38730:38845" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -12,7 +12,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="assets/css/application.css" />
+    <link rel="stylesheet" href="assets/css/application.css"/>
 
     <!--[if IE 7]>
     <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css"/>
@@ -520,7 +520,7 @@
     <div class="page-content">
         <div class="page-header position-relative">
             <h1>
-                New Users
+                Edit Users
                 <!--<small>-->
                 <!--<i class="icon-double-angle-right"></i>-->
                 <!--Static &amp; Dynamic Tables-->
@@ -535,34 +535,49 @@
 
                 <div class="row-fluid">
                     <div class="span12">
-                        <form novalidate="novalidate" method="post" id="new_user"
+                        <form id="validation-form" method="post" id="new_user"
                               class="simple_form new_user form-horizontal" action="/users" accept-charset="UTF-8">
                             <div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓"
                                                                                   name="utf8"><input type="hidden"
                                                                                                      value="7KsthwgaCabxwnSXMSx2vJyQYukX5crf7du1BGn4yoc="
                                                                                                      name="authenticity_token">
                             </div>
+                            <div class="control-group string required user_firstname"><label for="user_firstname"
+                                                                                             class="string required control-label"><abbr
+                                    title="required">*</abbr> First Name</label>
+
+                                <div class="controls"><input type="text" size="50" name="user[firstname]"
+                                                             id="user_firstname" class="string required" value="David"></div>
+                            </div>
+                            <div class="control-group string required user_lastname"><label for="user_lastname"
+                                                                                            class="string required control-label"><abbr
+                                    title="required">*</abbr> Last Name</label>
+
+                                <div class="controls"><input type="text" size="50" name="user[lastname]"
+                                                             id="user_lastname" class="string required" value="beckham"></div>
+                            </div>
                             <div class="control-group string required user_username"><label for="user_username"
                                                                                             class="string required control-label"><abbr
                                     title="required">*</abbr> Username</label>
 
                                 <div class="controls"><input type="text" size="50" name="user[username]"
-                                                             id="user_username" class="string required"
-                                                             autofocus="autofocus" value="adminstrator"></div>
+                                                             id="user_username" class="string required" value="Administrator"
+                                                             ></div>
                             </div>
                             <div class="control-group email required user_email"><label for="user_email"
                                                                                         class="email required control-label"><abbr
                                     title="required">*</abbr> Email</label>
 
-                                <div class="controls"><input type="email" value="admin@example.com" size="50" name="user[email]"
+                                <div class="controls"><input type="email" value="admin12@example.com" size="50" name="user[email]"
                                                              id="user_email" class="string email required"></div>
                             </div>
+
                             <div class="control-group password required user_password"><label for="user_password"
                                                                                               class="password required control-label"><abbr
                                     title="required">*</abbr> Password</label>
 
                                 <div class="controls"><input type="password" size="50" name="user[password]"
-                                                             id="user_password" class="password required" value=""></div>
+                                                             id="user_password" class="password required"></div>
                             </div>
                             <div class="control-group password required user_password_confirmation"><label
                                     for="user_password_confirmation" class="password required control-label"><abbr
@@ -573,18 +588,27 @@
                                                              id="user_password_confirmation" class="password required">
                                 </div>
                             </div>
-                            <label for="user_select_role" class="string optional control-label">Select role</label><br>
+                            <div class="control-group string required user_telephone"><label for="user_telephone"
+                                                                                             class="string required control-label"><abbr
+                                    title="required">*</abbr> Telephone</label>
+
+                                <div class="controls"><input type="text" size="50" name="user[telephone]"
+                                                             id="user_telephone" class="string required" value="(343) 456-5656"></div>
+                            </div>
+                            <label class="string optional control-label">Select role</label><br>
 
                             <div class="control-group radio_buttons optional user_role_ids">
                                 <div class="controls"><label class="radio"><input type="radio" value="1"
                                                                                   name="user[role_ids]"
                                                                                   id="user_role_ids_1"
-                                                                                  class="radio_buttons optional"><span
-                                        class="lbl">Admin</span></label><label class="radio"><input type="radio" checked="checked"
+                                                                                  class="radio_buttons optional"
+                                                                                  checked="checked"><span
+                                        class="lbl">Admin</span></label><label class="radio"><input type="radio"
                                                                                                     value="2"
                                                                                                     name="user[role_ids]"
                                                                                                     id="user_role_ids_2"
-                                                                                                    class="radio_buttons optional"><span
+                                                                                                    class="radio_buttons optional"
+                                                                                                    ><span
                                         class="lbl">Business Owner</span></label><label class="radio"><input
                                         type="radio" value="5" name="user[role_ids]" id="user_role_ids_5"
                                         class="radio_buttons optional"><span
@@ -606,7 +630,7 @@
                         </div></div>    -->
 
                             <!--<input type="submit" value="Create User" name="commit" class="btn btn-primary">-->
-                            <a class="btn btn-primary" href="list_user.html">Update User</a>
+                            <a class="btn btn-primary" href="list_user.html" id="createUserBtn">Update User</a>
                         </form>
 
                     </div>
@@ -707,6 +731,12 @@
 <script src="assets/js/bootstrap.min.js"></script>
 
 <!--page specific plugin scripts-->
+<script src="assets/js/fuelux/fuelux.wizard.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/additional-methods.min.js"></script>
+<script src="assets/js/bootbox.min.js"></script>
+<script src="assets/js/jquery.maskedinput.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
 
 <script src="assets/js/jquery.dataTables.min.js"></script>
 <script src="assets/js/jquery.dataTables.bootstrap.js"></script>
@@ -717,5 +747,106 @@
 <script src="assets/js/ace.min.js"></script>
 <script src="assets/js/jquery_ujs.js"></script>
 <!--inline scripts related to this page-->
+<script type="text/javascript">
+
+    $('#createUserBtn').click(function(event){
+        if(!$('#validation-form').valid()){
+            event.preventDefault();
+        }
+    });
+
+    $(function() {
+
+//        $('[data-rel=tooltip]').tooltip();
+
+        //documentation : http://docs.jquery.com/Plugins/Validation/validate
+
+
+        $.mask.definitions['~']='[+-]';
+        $('#user_telephone').mask('(999) 999-9999');
+
+        jQuery.validator.addMethod("phone", function (value, element) {
+            return this.optional(element) || /^\(\d{3}\) \d{3}\-\d{4}( x\d{1,6})?$/.test(value);
+        }, "Enter a valid phone number.");
+
+        $('#validation-form').validate({
+            errorElement: 'span',
+            errorClass: 'help-inline',
+            focusInvalid: false ,
+            rules: {
+                "user[firstname]":{
+                    required: true
+                },
+                "user[email]": {
+                    required: true,
+                    email:true
+                },
+                "user[password]": {
+                    required: true,
+                    minlength: 8
+                },
+                "user[password_confirmation]": {
+                    required: true,
+                    minlength: 8,
+                    equalTo: "#user_password"
+                },
+                name: {
+                    required: true
+                },
+                phone: {
+                    required: true,
+                    phone: 'required'
+                }
+            },
+
+            messages: {
+//                "user[firstname]":{
+//                    required: "aaaaaaaaaaaaaaaaaaa"
+//                },
+                "user[email]": {
+                    required: "Please provide a valid email.",
+                    email: "is invalid"
+                },
+                password: {
+                    required: "Please specify a password.",
+                    minlength: "is too short (minimum is 8 characters)"
+                }
+            },
+//
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                $('.alert-error', $('.login-form')).show();
+            },
+
+            highlight: function (e) {
+                $(e).closest('.control-group').removeClass('info').addClass('error');
+            },
+
+            success: function (e) {
+                $(e).closest('.control-group').removeClass('error').addClass('info');
+                $(e).remove();
+            },
+
+            errorPlacement: function (error, element) {
+                if(element.is(':checkbox') || element.is(':radio')) {
+                    var controls = element.closest('.controls');
+                    if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
+                    else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+                }
+                else if(element.is('.select2')) {
+                    error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+                }
+                else if(element.is('.chzn-select')) {
+                    error.insertAfter(element.siblings('[class*="chzn-container"]:eq(0)'));
+                }
+                else error.insertAfter(element);
+            },
+
+            submitHandler: function (form) {
+            },
+            invalidHandler: function (form) {
+            }
+        });
+    })
+</script>
 </body>
 </html>

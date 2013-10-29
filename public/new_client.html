@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>New Client</title>
+
+    <meta name="description" content="Static &amp; Dynamic Tables"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--basic styles-->
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/application.css"/>
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
+
+    <!--page specific plugin styles-->
+
+    <!--fonts-->
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
+
+    <!--ace styles-->
+
+    <link rel="stylesheet" href="assets/css/ace.min.css"/>
+    <link rel="stylesheet" href="assets/css/ace-responsive.min.css"/>
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css"/>
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ace-ie.min.css"/>
+    <![endif]-->
+
+    <!--inline styles related to this page-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <style>
+        #panel {
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+        }
+
+            /*Fix bug Twitter Bootstrap CSS affecting Google Maps*/
+        #map-canvas img {
+            max-width: none;
+        }
+
+
+    </style>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC7icpVNHCpzkJjilXkACn8VG9HlSe0u3s&sensor=false"></script>
+    <script>
+        var geocoder;
+        var map;
+        //      var infowindow = new google.maps.InfoWindow();
+
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(21.0333333, 105.85000000000002);
+            var mapOptions = {
+                zoom: 8,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+
+            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            google.maps.event.addListener(map, 'click', function (event) {
+                placeMarker(event.latLng);
+                google.maps.event.clearListeners(this, 'click');
+            });
+
+            function placeMarker(location) {
+//              var marker = new google.maps.Marker({
+//                  position: location,
+//                  map: map
+//              });
+//              var infowindow = new google.maps.InfoWindow({
+//                  content: 'Latitude: ' + location.lat() +
+//                          '<br>Longitude: ' + location.lng()
+//              });
+//              infowindow.open(map,marker);
+                var infowindow = new google.maps.InfoWindow();
+                geocoder.geocode({'latLng': location}, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (results[1]) {
+                            map.setZoom(11);
+                            marker = new google.maps.Marker({
+                                position: latlng,
+                                map: map
+                            });
+                            infowindow.setContent(results[1].formatted_address);
+                            infowindow.open(map, marker);
+                            $('#client_location_attributes_address').val(results[1].formatted_address);
+                        } else {
+                            alert('No results found');
+                        }
+                    } else {
+                        alert('Geocoder failed due to: ' + status);
+                    }
+                });
+            }
+        }
+
+
+        function codeAddress() {
+            $('#map-canvas').show();
+            initialize();
+            var address = document.getElementById('client_location_attributes_address').value;
+            if (address == null || address == '') {
+                return;
+            }
+            geocoder.geocode({ 'address': address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+//                  infowindow.setContent({
+//                      content: 'Latitude: ' + results[0].geometry.location +
+//                              '<br>Longitude: ' + results[0].geometry.location
+//                  });
+                    var infowindow = new google.maps.InfoWindow({
+//                        content: 'Latitude: ' + results[0].geometry.location.lat() +
+//                                '<br>Longitude: ' + results[0].geometry.location.lng()
+                        content: address
+                    });
+                    infowindow.open(map, marker);
+//                    $('#client_location_attributes_latitude').val(results[0].geometry.location.lat());
+//                    $('#client_location_attributes_longitude').val(results[0].geometry.location.lng());
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+
+        //        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>
+<div class="navbar">
+<div class="navbar-inner">
+<div class="container-fluid">
+<a href="#" class="brand">
+    <small>
+        <i class="icon-leaf"></i>
+        Ipad App
+    </small>
+</a><!--/.brand-->
+
+<ul class="nav ace-nav pull-right">
+<!--<li class="grey">-->
+<!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+<!--<i class="icon-tasks"></i>-->
+<!--<span class="badge badge-grey">4</span>-->
+<!--</a>-->
+
+<!--<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">-->
+<!--<li class="nav-header">-->
+<!--<i class="icon-ok"></i>-->
+<!--4 Tasks to complete-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<div class="clearfix">-->
+<!--<span class="pull-left">Software Update</span>-->
+<!--<span class="pull-right">65%</span>-->
+<!--</div>-->
+
+<!--<div class="progress progress-mini ">-->
+<!--<div style="width:65%" class="bar"></div>-->
+<!--</div>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<div class="clearfix">-->
+<!--<span class="pull-left">Hardware Upgrade</span>-->
+<!--<span class="pull-right">35%</span>-->
+<!--</div>-->
+
+<!--<div class="progress progress-mini progress-danger">-->
+<!--<div style="width:35%" class="bar"></div>-->
+<!--</div>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<div class="clearfix">-->
+<!--<span class="pull-left">Unit Testing</span>-->
+<!--<span class="pull-right">15%</span>-->
+<!--</div>-->
+
+<!--<div class="progress progress-mini progress-warning">-->
+<!--<div style="width:15%" class="bar"></div>-->
+<!--</div>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<div class="clearfix">-->
+<!--<span class="pull-left">Bug Fixes</span>-->
+<!--<span class="pull-right">90%</span>-->
+<!--</div>-->
+
+<!--<div class="progress progress-mini progress-success progress-striped active">-->
+<!--<div style="width:90%" class="bar"></div>-->
+<!--</div>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--See tasks with details-->
+<!--<i class="icon-arrow-right"></i>-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+
+<!--<li class="purple">-->
+<!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+<!--<i class="icon-bell-alt icon-animated-bell"></i>-->
+<!--<span class="badge badge-important">8</span>-->
+<!--</a>-->
+
+<!--<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-closer">-->
+<!--<li class="nav-header">-->
+<!--<i class="icon-warning-sign"></i>-->
+<!--8 Notifications-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<div class="clearfix">-->
+<!--<span class="pull-left">-->
+<!--<i class="btn btn-mini no-hover btn-pink icon-comment"></i>-->
+<!--New Comments-->
+<!--</span>-->
+<!--<span class="pull-right badge badge-info">+12</span>-->
+<!--</div>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="btn btn-mini btn-primary icon-user"></i>-->
+<!--Bob just signed up as an editor ...-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<div class="clearfix">-->
+<!--<span class="pull-left">-->
+<!--<i class="btn btn-mini no-hover btn-success icon-shopping-cart"></i>-->
+<!--New Orders-->
+<!--</span>-->
+<!--<span class="pull-right badge badge-success">+8</span>-->
+<!--</div>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<div class="clearfix">-->
+<!--<span class="pull-left">-->
+<!--<i class="btn btn-mini no-hover btn-info icon-twitter"></i>-->
+<!--Followers-->
+<!--</span>-->
+<!--<span class="pull-right badge badge-info">+11</span>-->
+<!--</div>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--See all notifications-->
+<!--<i class="icon-arrow-right"></i>-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+
+<!--<li class="green">-->
+<!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+<!--<i class="icon-envelope icon-animated-vertical"></i>-->
+<!--<span class="badge badge-success">5</span>-->
+<!--</a>-->
+
+<!--<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">-->
+<!--<li class="nav-header">-->
+<!--<i class="icon-envelope-alt"></i>-->
+<!--5 Messages-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />-->
+<!--<span class="msg-body">-->
+<!--<span class="msg-title">-->
+<!--<span class="blue">Alex:</span>-->
+<!--Ciao sociis natoque penatibus et auctor ...-->
+<!--</span>-->
+
+<!--<span class="msg-time">-->
+<!--<i class="icon-time"></i>-->
+<!--<span>a moment ago</span>-->
+<!--</span>-->
+<!--</span>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />-->
+<!--<span class="msg-body">-->
+<!--<span class="msg-title">-->
+<!--<span class="blue">Susan:</span>-->
+<!--Vestibulum id ligula porta felis euismod ...-->
+<!--</span>-->
+
+<!--<span class="msg-time">-->
+<!--<i class="icon-time"></i>-->
+<!--<span>20 minutes ago</span>-->
+<!--</span>-->
+<!--</span>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />-->
+<!--<span class="msg-body">-->
+<!--<span class="msg-title">-->
+<!--<span class="blue">Bob:</span>-->
+<!--Nullam quis risus eget urna mollis ornare ...-->
+<!--</span>-->
+
+<!--<span class="msg-time">-->
+<!--<i class="icon-time"></i>-->
+<!--<span>3:15 pm</span>-->
+<!--</span>-->
+<!--</span>-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<a href="#">-->
+<!--See all messages-->
+<!--<i class="icon-arrow-right"></i>-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+
+<li class="light-blue">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+        <!--<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />-->
+								<span class="user-info">
+									<small>Welcome,</small>
+									Administrator
+								</span>
+
+        <i class="icon-caret-down"></i>
+    </a>
+
+    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+        <li>
+            <a href="edit_user.html">
+                <i class="icon-cog"></i>
+                Edit Account
+            </a>
+        </li>
+
+        <!--<li>-->
+        <!--<a href="#">-->
+        <!--<i class="icon-user"></i>-->
+        <!--Profile-->
+        <!--</a>-->
+        <!--</li>-->
+
+        <li class="divider"></li>
+
+        <li>
+            <!-- <a href="/d/user/sign_out"  rel="nofollow">Sign Out</a> -->
+            <!--<a rel="nofollow"  href="/d/user/sign_out">Sign Out</a>-->
+            <a href="login.html">
+                <i class="icon-off"></i>
+                Sign Out
+            </a>
+        </li>
+    </ul>
+
+</li>
+</ul>
+<!--/.ace-nav-->
+</div>
+<!--/.container-fluid-->
+</div>
+<!--/.navbar-inner-->
+</div>
+
+<div class="main-container container-fluid">
+<a class="menu-toggler" id="menu-toggler" href="#">
+    <span class="menu-text"></span>
+</a>
+
+<div id="sidebar" class="sidebar">
+    <div id="sidebar-shortcuts" class="sidebar-shortcuts">
+
+        <div id="sidebar-shortcuts-large" class="sidebar-shortcuts-large">
+            <button class="btn invisible">
+            </button>
+            <!--<button class="btn btn-small btn-success">-->
+            <!--<i class="icon-signal"></i>-->
+            <!--</button>-->
+
+            <!--<button class="btn btn-small btn-info">-->
+            <!--<i class="icon-pencil"></i>-->
+            <!--</button>-->
+
+            <!--<button class="btn btn-small btn-warning">-->
+            <!--<i class="icon-group"></i>-->
+            <!--</button>-->
+
+            <!--<button class="btn btn-small btn-danger">-->
+            <!--<i class="icon-cogs"></i>-->
+            <!--</button>-->
+        </div>
+
+        <div id="sidebar-shortcuts-mini" class="sidebar-shortcuts-mini">
+            <span class="btn btn-success"></span>
+
+            <span class="btn btn-info"></span>
+
+            <span class="btn btn-warning"></span>
+
+            <span class="btn btn-danger"></span>
+        </div>
+    </div>
+    <!--#sidebar-shortcuts-->
+
+    <ul class="nav nav-list">
+        <li>
+            <a href="list_user.html">
+                <i class="icon-user"></i>
+                <span class="menu-text"> User </span>
+            </a>
+        </li>
+
+
+        <li class="">
+            <a class="dropdown-toggle" href="#">
+                <i class="icon-group"></i>
+                <span class="menu-text"> Client </span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                <li>
+                    <a href="/clients/new">
+                        <i class="icon-double-angle-right"></i>
+                        Add client
+                    </a>
+                </li>
+                <li>
+                    <a href="/clients">
+                        <i class="icon-double-angle-right"></i>
+                        List clients
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-double-angle-right"></i>
+                        Add Note
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/schedules&gt;">
+                        <i class="icon-double-angle-right"></i>
+                        Client Answers
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="/meetings">
+                <i class="icon-calendar"></i>
+
+							<span class="menu-text">
+								Meeting
+							</span>
+            </a>
+        </li>
+
+        <li class="">
+            <a class="dropdown-toggle" href="#">
+                <i class="icon-file"></i>
+                <span class="menu-text"> Schedule </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu" style="display: none;">
+                <li>
+                    <a href="/schedules/new">
+                        <i class="icon-double-angle-right"></i>
+                        Make Schedule
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/schedules&gt;">
+                        <i class="icon-double-angle-right"></i>
+                        List Schedules
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="dropdown-toggle" href="#">
+                <i class="icon-file"></i>
+                <span class="menu-text"> Question </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+                <li>
+                    <a href="/industries">
+                        <i class="icon-double-angle-right"></i>
+                        List Industry
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/questions">
+                        <i class="icon-double-angle-right"></i>
+                        List Question
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="icon-bar-chart"></i>
+                <span class="menu-text"> Statistic </span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#">
+                <i class="icon-info"></i>
+                <span class="menu-text"> Introduction </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="icon-info"></i>
+                <span class="menu-text"> About Us </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="icon-dollar"></i>
+                <span class="menu-text"> Package Payment </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="icon-pencil"></i>
+                <span class="menu-text"> Contact Us </span>
+            </a>
+        </li>
+
+    </ul>
+    <!--/.nav-list-->
+
+    <div id="sidebar-collapse" class="sidebar-collapse">
+        <i class="icon-double-angle-left"></i>
+    </div>
+</div>
+
+<div class="main-content">
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="icon-home home-icon"></i>
+            <a href="#">Home</a>
+
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+        </li>
+        <li class="active">Users</li>
+    </ul>
+    <!--.breadcrumb-->
+
+    <div class="nav-search" id="nav-search">
+        <form class="form-search"/>
+							<span class="input-icon">
+								<input type="text" placeholder="Search ..." class="input-small nav-search-input"
+                                       id="nav-search-input" autocomplete="off"/>
+								<i class="icon-search nav-search-icon"></i>
+							</span>
+        </form>
+    </div>
+    <!--#nav-search-->
+</div>
+
+<div class="page-content">
+<div class="page-header position-relative">
+    <h1>
+        New Client
+    </h1>
+</div>
+<!--/.page-header-->
+
+<div class="row-fluid">
+<div class="span12">
+<!--PAGE CONTENT BEGINS-->
+
+<div class="row-fluid">
+<div class="span12">
+<form novalidate="novalidate" method="post" id="new_client" class="simple_form new_client form-horizontal"
+      action="/clients" accept-charset="UTF-8">
+<div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden"
+                                                                                                 value="0Muz15bLC/0wR0BQY9Hk9tzLISSWlzCpmSiuEXCTfZc="
+                                                                                                 name="authenticity_token">
+</div>
+
+<div class="control-group string optional client_name"><label for="client_name" class="string optional control-label">Name</label>
+
+    <div class="controls"><input type="text" size="50" name="client[name]" id="client_name" class="string optional"
+                                 autofocus="autofocus"></div>
+</div>
+<div class="control-group tel required client_phone"><label for="client_phone" class="tel required control-label"><abbr
+        title="required">*</abbr> Phone</label>
+
+    <div class="controls"><input type="tel" size="50" name="client[phone]" id="client_phone"
+                                 class="string tel required"></div>
+</div>
+<div class="control-group email required client_email"><label for="client_email"
+                                                              class="email required control-label"><abbr
+        title="required">*</abbr> Email</label>
+
+    <div class="controls"><input type="email" size="50" name="client[email]" id="client_email"
+                                 class="string email required"></div>
+</div>
+<div class="control-group country required client_country"><label for="client_country"
+                                                                  class="country required control-label"><abbr
+        title="required">*</abbr> Country</label>
+
+<div class="controls"><select name="client[country]" id="client_country" class="country required">
+<option value=""></option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Åland Islands">Åland Islands</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+<option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Botswana">Botswana</option>
+<option value="Bouvet Island">Bouvet Island</option>
+<option value="Brazil">Brazil</option>
+<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+<option value="Brunei Darussalam">Brunei Darussalam</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Canada">Canada</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+<option value="Colombia">Colombia</option>
+<option value="Comoros">Comoros</option>
+<option value="Congo">Congo</option>
+<option value="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+<option value="Croatia">Croatia</option>
+<option value="Cuba">Cuba</option>
+<option value="Curaçao">Curaçao</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Estonia">Estonia</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="French Southern Territories">French Southern Territories</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Grenada">Grenada</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guernsey">Guernsey</option>
+<option value="Guinea">Guinea</option>
+<option value="Guinea-Bissau">Guinea-Bissau</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+<option value="Iraq">Iraq</option>
+<option value="Ireland">Ireland</option>
+<option value="Isle of Man">Isle of Man</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jersey">Jersey</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+<option value="Korea, Republic of">Korea, Republic of</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Libya">Libya</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macao">Macao</option>
+<option value="Macedonia, the former Yugoslav Republic of">Macedonia, the former Yugoslav Republic of</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malawi">Malawi</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Maldives">Maldives</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Mexico">Mexico</option>
+<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+<option value="Moldova, Republic of">Moldova, Republic of</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montenegro">Montenegro</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibia">Namibia</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Netherlands">Netherlands</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Niger">Niger</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Niue">Niue</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Palestine, State of">Palestine, State of</option>
+<option value="Panama">Panama</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Philippines">Philippines</option>
+<option value="Pitcairn">Pitcairn</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="Réunion">Réunion</option>
+<option value="Romania">Romania</option>
+<option value="Russian Federation">Russian Federation</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Saint Barthélemy">Saint Barthélemy</option>
+<option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Saint Martin (French part)">Saint Martin (French part)</option>
+<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+<option value="Samoa">Samoa</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Senegal">Senegal</option>
+<option value="Serbia">Serbia</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapore">Singapore</option>
+<option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Somalia">Somalia</option>
+<option value="South Africa">South Africa</option>
+<option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+<option value="South Sudan">South Sudan</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Sudan">Sudan</option>
+<option value="Suriname">Suriname</option>
+<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+<option value="Swaziland">Swaziland</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syrian Arab Republic">Syrian Arab Republic</option>
+<option value="Taiwan, Province of China">Taiwan, Province of China</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+<option value="Thailand">Thailand</option>
+<option value="Timor-Leste">Timor-Leste</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="United States">United States</option>
+<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+<option value="Viet Nam">Viet Nam</option>
+<option value="Virgin Islands, British">Virgin Islands, British</option>
+<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+<option value="Wallis and Futuna">Wallis and Futuna</option>
+<option value="Western Sahara">Western Sahara</option>
+<option value="Yemen">Yemen</option>
+<option value="Zambia">Zambia</option>
+</select></div>
+</div>
+<div class="control-group string required client_city"><label for="client_city"
+                                                              class="string required control-label"><abbr
+        title="required">*</abbr> City</label>
+
+    <div class="controls"><input type="text" size="50" name="client[city]" id="client_city" class="string required">
+    </div>
+</div>
+
+
+<div class="control-group string required client_location_address"><label for="client_location_attributes_address"
+                                                                          class="string required control-label"><abbr
+        title="required">*</abbr> Address</label>
+
+    <div class="controls"><input type="text" size="50" name="client[location_attributes][address]"
+                                 id="client_location_attributes_address" class="string required"></div>
+</div>
+<div class="control-group">
+    <label class="string control-label">
+    </label>
+
+    <div class="controls">
+        <input type="button" onclick="codeAddress()" value="Get Position On Map">
+        <br/>
+
+        <div id="map-canvas" style="display:none; width:500px;height:380px;"></div>
+    </div>
+
+    <!--<div class="control-group float optional client_location_latitude"><label for="client_location_attributes_latitude" class="float optional control-label">Latitude</label><div class="controls"><input type="number" step="any" name="client[location_attributes][latitude]" id="client_location_attributes_latitude" class="numeric float optional"></div></div>-->
+    <!--<div class="control-group float optional client_location_longitude"><label for="client_location_attributes_longitude" class="float optional control-label">Longitude</label><div class="controls"><input type="number" step="any" name="client[location_attributes][longitude]" id="client_location_attributes_longitude" class="numeric float optional"></div></div>-->
+
+
+    <br/>
+
+    <div class="control-group integer client_age">
+        <label for="client_age" class="integer control-label">
+            Age
+        </label>
+
+        <div class="controls">
+            <input type="number" step="1" name="client[age]" id="client_age" class="numeric integer">
+        </div>
+    </div>
+
+    <div class="control-group radio_buttons optional client_sex">
+        <label class="integer required control-label"><abbr title="required">*</abbr> Sex</label>
+
+        <div class="controls">
+            <label>
+                <input type="radio" value="1"
+                       name="user[sex]"
+                       id="user_sex_1"
+                       class="radio_buttons optional"><span
+                    class="lbl">Male</span></label>
+            <label>
+                <input type="radio"
+                       value="2"
+                       name="user[sex]"
+                       id="user_role_ids_2"
+                       class="radio_buttons optional"><span
+                    class="lbl">Female</span></label>
+        </div>
+    </div>
+
+    <a class="btn btn-primary" href="list_clients.html" id="createUserBtn">Create Client</a>
+
+</form>
+
+</div>
+<!--/span-->
+</div>
+<!--/row-->
+
+<!--PAGE CONTENT ENDS-->
+</div>
+<!--/.span-->
+</div>
+<!--/.row-fluid-->
+</div>
+<!--/.page-content-->
+
+<div class="ace-settings-container" id="ace-settings-container">
+    <div class="btn btn-app btn-mini btn-warning ace-settings-btn" id="ace-settings-btn">
+        <i class="icon-cog bigger-150"></i>
+    </div>
+
+    <div class="ace-settings-box" id="ace-settings-box">
+        <div>
+            <div class="pull-left">
+                <select id="skin-colorpicker" class="hide">
+                    <option data-class="default" value="#438EB9"/>
+                    #438EB9
+                    <option data-class="skin-1" value="#222A2D"/>
+                    #222A2D
+                    <option data-class="skin-2" value="#C6487E"/>
+                    #C6487E
+                    <option data-class="skin-3" value="#D0D0D0"/>
+                    #D0D0D0
+                </select>
+            </div>
+            <span>&nbsp; Choose Skin</span>
+        </div>
+
+        <div>
+            <input type="checkbox" class="ace-checkbox-2" id="ace-settings-header"/>
+            <label class="lbl" for="ace-settings-header"> Fixed Header</label>
+        </div>
+
+        <div>
+            <input type="checkbox" class="ace-checkbox-2" id="ace-settings-sidebar"/>
+            <label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+        </div>
+
+        <div>
+            <input type="checkbox" class="ace-checkbox-2" id="ace-settings-breadcrumbs"/>
+            <label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+        </div>
+
+        <div>
+            <input type="checkbox" class="ace-checkbox-2" id="ace-settings-rtl"/>
+            <label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+        </div>
+    </div>
+</div>
+<!--/#ace-settings-container-->
+</div>
+<!--/.main-content-->
+</div>
+<!--/.main-container-->
+
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-small btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+
+<!--basic scripts-->
+
+<!--[if !IE]>-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!--<![endif]-->
+
+<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+<!--[if !IE]>-->
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+</script>
+
+<!--<![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>" + "<" + "/script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    if ("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!--page specific plugin scripts-->
+<script src="assets/js/fuelux/fuelux.wizard.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/additional-methods.min.js"></script>
+<script src="assets/js/bootbox.min.js"></script>
+<script src="assets/js/jquery.maskedinput.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
+
+<script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/jquery.dataTables.bootstrap.js"></script>
+
+<!--ace scripts-->
+
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+<script src="assets/js/jquery_ujs.js"></script>
+<!--inline scripts related to this page-->
+<script type="text/javascript">
+
+    $('#createUserBtn').click(function (event) {
+        if (!$('#new_client').valid()) {
+            event.preventDefault();
+        }
+    });
+
+    $(function () {
+
+//        $('[data-rel=tooltip]').tooltip();
+
+        //documentation : http://docs.jquery.com/Plugins/Validation/validate
+
+
+        $.mask.definitions['~'] = '[+-]';
+        $('#client_phone').mask('(999) 999-9999');
+
+        jQuery.validator.addMethod("phone", function (value, element) {
+            return this.optional(element) || /^\(\d{3}\) \d{3}\-\d{4}( x\d{1,6})?$/.test(value);
+        }, "Enter a valid phone number.");
+
+        $('#new_client').validate({
+            errorElement: 'span',
+            errorClass: 'help-inline',
+            focusInvalid: false,
+            rules: {
+                "user[firstname]": {
+                    required: true
+                },
+                "user[email]": {
+                    required: true,
+                    email: true
+                },
+                "user[password]": {
+                    required: true,
+                    minlength: 8
+                },
+                "user[password_confirmation]": {
+                    required: true,
+                    minlength: 8,
+                    equalTo: "#user_password"
+                },
+                name: {
+                    required: true
+                },
+                phone: {
+                    required: true,
+                    phone: 'required'
+                }
+            },
+
+            messages: {
+//                "user[firstname]":{
+//                    required: "aaaaaaaaaaaaaaaaaaa"
+//                },
+                "user[email]": {
+                    required: "Please provide a valid email.",
+                    email: "is invalid"
+                },
+                password: {
+                    required: "Please specify a password.",
+                    minlength: "is too short (minimum is 8 characters)"
+                }
+            },
+//
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                $('.alert-error', $('.login-form')).show();
+            },
+
+            highlight: function (e) {
+                $(e).closest('.control-group').removeClass('info').addClass('error');
+            },
+
+            success: function (e) {
+                $(e).closest('.control-group').removeClass('error').addClass('info');
+                $(e).remove();
+            },
+
+            errorPlacement: function (error, element) {
+                if (element.is(':checkbox') || element.is(':radio')) {
+                    var controls = element.closest('.controls');
+                    if (controls.find(':checkbox,:radio').length > 1) controls.append(error);
+                    else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+                }
+                else if (element.is('.select2')) {
+                    error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+                }
+                else if (element.is('.chzn-select')) {
+                    error.insertAfter(element.siblings('[class*="chzn-container"]:eq(0)'));
+                }
+                else error.insertAfter(element);
+            },
+
+            submitHandler: function (form) {
+            },
+            invalidHandler: function (form) {
+            }
+        });
+    })
+</script>
+
+
+</body>
+</html>

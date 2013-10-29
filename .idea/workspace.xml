@@ -14,7 +14,10 @@
     <file path="$PROJECT_DIR$/../../ipadapp/app/views/users/_form.html.erb" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382953582102" ignored="false" />
     <file path="/list_clients.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383036407341" ignored="false" />
     <file path="/new_client.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383038991874" ignored="false" />
-    <file path="/list_meetings.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383040954855" ignored="false" />
+    <file path="/list_meetings.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383043785299" ignored="false" />
+    <file path="/list_schedules.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383044445031" ignored="false" />
+    <file path="$PROJECT_DIR$/../../ipadapp/app/views/layouts/_sidebar.html.erb" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383044068701" ignored="false" />
+    <file path="/_sidebar.html.erb" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383044055382" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,94 +37,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="302" column="14" selection-start="1230" selection-end="10354" vertical-scroll-proportion="-2.2837837">
-              <folding>
-                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383042046255" expanded="true" signature="57326:57434" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="introduction.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/introduction.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="10" selection-start="8952" selection-end="8952" vertical-scroll-proportion="-6.391892">
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383042634619" expanded="true" signature="22969:23077" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about_us.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/about_us.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="10" selection-start="8952" selection-end="8952" vertical-scroll-proportion="-6.391892">
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383042666271" expanded="true" signature="22969:23077" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact_us.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/contact_us.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="10" selection-start="8952" selection-end="8952" vertical-scroll-proportion="-6.391892">
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383042690031" expanded="true" signature="22969:23077" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_user.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/edit_user.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="462" column="49" selection-start="12748" selection-end="12748" vertical-scroll-proportion="-5.125">
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383042189539" expanded="true" signature="26307:26422" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="list_meetings.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/list_meetings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="10" selection-start="8943" selection-end="8943" vertical-scroll-proportion="-6.391892">
+            <state line="698" column="27" selection-start="22341" selection-end="22341" vertical-scroll-proportion="-15.625">
               <folding>
                 <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383042867495" expanded="true" signature="21461:21569" placeholder="..." />
+                <marker date="1383043814447" expanded="true" signature="19869:19977" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package_management.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/package_management.html">
+      <file leaf-file-name="list_schedules.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/list_schedules.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="10" selection-start="8952" selection-end="8952" vertical-scroll-proportion="0.93762994">
+            <state line="672" column="101" selection-start="26591" selection-end="26591" vertical-scroll-proportion="0.4811133">
               <folding>
                 <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383042921411" expanded="true" signature="22969:23077" placeholder="..." />
+                <marker date="1383044445167" expanded="true" signature="29115:29223" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -143,7 +79,6 @@
         <option value="$PROJECT_DIR$/public/list_clients.html" />
         <option value="$PROJECT_DIR$/public/list_industries.html" />
         <option value="$PROJECT_DIR$/public/list_questions.html" />
-        <option value="$PROJECT_DIR$/public/list_schedules.html" />
         <option value="$PROJECT_DIR$/public/list_users.html" />
         <option value="$PROJECT_DIR$/public/new_client.html" />
         <option value="$PROJECT_DIR$/public/new_schedule.html" />
@@ -151,8 +86,9 @@
         <option value="$PROJECT_DIR$/public/introduction.html" />
         <option value="$PROJECT_DIR$/public/about_us.html" />
         <option value="$PROJECT_DIR$/public/contact_us.html" />
-        <option value="$PROJECT_DIR$/public/list_meetings.html" />
         <option value="$PROJECT_DIR$/public/package_management.html" />
+        <option value="$PROJECT_DIR$/public/list_meetings.html" />
+        <option value="$PROJECT_DIR$/public/list_schedules.html" />
       </list>
     </option>
   </component>
@@ -676,17 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/list_schedules.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="486" column="18" selection-start="16186" selection-end="16186" vertical-scroll-proportion="0.8966203">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042281299" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/list_users.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="486" column="18" selection-start="16184" selection-end="16184" vertical-scroll-proportion="0.8966203">
@@ -742,7 +667,7 @@
             <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042046255" expanded="true" signature="57326:57434" placeholder="..." />
+            <marker date="1383042046255" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -753,7 +678,7 @@
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042634619" expanded="true" signature="22969:23077" placeholder="..." />
+            <marker date="1383042634619" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -764,7 +689,7 @@
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042666271" expanded="true" signature="22969:23077" placeholder="..." />
+            <marker date="1383042666271" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -775,7 +700,7 @@
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042690031" expanded="true" signature="22969:23077" placeholder="..." />
+            <marker date="1383042690031" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -787,29 +712,40 @@
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042189539" expanded="true" signature="26307:26422" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/list_meetings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="10" selection-start="8943" selection-end="8943" vertical-scroll-proportion="-6.391892">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042867495" expanded="true" signature="21461:21569" placeholder="..." />
+            <marker date="1383042189539" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/package_management.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="10" selection-start="8952" selection-end="8952" vertical-scroll-proportion="0.93762994">
+        <state line="281" column="63" selection-start="8294" selection-end="8294" vertical-scroll-proportion="0.30922243">
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383042921411" expanded="true" signature="22969:23077" placeholder="..." />
+            <marker date="1383042921411" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/list_meetings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="698" column="27" selection-start="22341" selection-end="22341" vertical-scroll-proportion="-15.625">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383043814447" expanded="true" signature="19869:19977" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/list_schedules.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="672" column="101" selection-start="26591" selection-end="26591" vertical-scroll-proportion="0.4811133">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383044445167" expanded="true" signature="29115:29223" placeholder="..." />
           </folding>
         </state>
       </provider>

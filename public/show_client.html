@@ -501,7 +501,7 @@
 								<i class="icon-angle-right arrow-icon"></i>
 							</span>
             </li>
-            <li class="active">Edit User</li>
+            <li class="active">Client Details</li>
         </ul>
         <!--.breadcrumb-->
 
@@ -520,7 +520,7 @@
     <div class="page-content">
         <div class="page-header position-relative">
             <h1>
-                Edit Users
+                Users Details
                 <!--<small>-->
                 <!--<i class="icon-double-angle-right"></i>-->
                 <!--Static &amp; Dynamic Tables-->
@@ -530,113 +530,39 @@
         <!--/.page-header-->
 
         <div class="row-fluid">
-            <div class="span12">
+            <div class="span12 form-horizontal">
                 <!--PAGE CONTENT BEGINS-->
+                <p>
+                    <b>First Name:</b>
+                    David
+                </p>
 
-                <div class="row-fluid">
-                    <div class="span12">
-                        <form id="validation-form" method="post" id="new_user"
-                              class="simple_form new_user form-horizontal" action="/users" accept-charset="UTF-8">
-                            <div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓"
-                                                                                  name="utf8"><input type="hidden"
-                                                                                                     value="7KsthwgaCabxwnSXMSx2vJyQYukX5crf7du1BGn4yoc="
-                                                                                                     name="authenticity_token">
-                            </div>
-                            <div class="control-group string required user_firstname"><label for="user_firstname"
-                                                                                             class="string required control-label"><abbr
-                                    title="required">*</abbr> First Name</label>
+                <p>
+                    <b>Last Name:</b>
+                    beckham
+                </p>
 
-                                <div class="controls"><input type="text" size="50" name="user[firstname]"
-                                                             id="user_firstname" class="string required" value="David"></div>
-                            </div>
-                            <div class="control-group string required user_lastname"><label for="user_lastname"
-                                                                                            class="string required control-label"><abbr
-                                    title="required">*</abbr> Last Name</label>
+                <p>
+                    <b>User Name:</b>
+                    Administrator
+                </p>
+                <p>
+                    <b>Email:</b>
+                    admin12@example.com
+                </p>
+                <p>
+                    <b>Telephone:</b>
+                    (343) 456-5656
+                </p>
+                <p>
+                    <b>Role:</b>
+                    Admin
+                </p>
 
-                                <div class="controls"><input type="text" size="50" name="user[lastname]"
-                                                             id="user_lastname" class="string required" value="beckham"></div>
-                            </div>
-                            <div class="control-group string required user_username"><label for="user_username"
-                                                                                            class="string required control-label"><abbr
-                                    title="required">*</abbr> Username</label>
 
-                                <div class="controls"><input type="text" size="50" name="user[username]"
-                                                             id="user_username" class="string required" value="Administrator"
-                                                             ></div>
-                            </div>
-                            <div class="control-group email required user_email"><label for="user_email"
-                                                                                        class="email required control-label"><abbr
-                                    title="required">*</abbr> Email</label>
 
-                                <div class="controls"><input type="email" value="admin12@example.com" size="50" name="user[email]"
-                                                             id="user_email" class="string email required"></div>
-                            </div>
-
-                            <div class="control-group password required user_password"><label for="user_password"
-                                                                                              class="password required control-label"><abbr
-                                    title="required">*</abbr> Password</label>
-
-                                <div class="controls"><input type="password" size="50" name="user[password]"
-                                                             id="user_password" class="password required"></div>
-                            </div>
-                            <div class="control-group password required user_password_confirmation"><label
-                                    for="user_password_confirmation" class="password required control-label"><abbr
-                                    title="required">*</abbr> Password confirmation</label>
-
-                                <div class="controls"><input type="password" size="50"
-                                                             name="user[password_confirmation]"
-                                                             id="user_password_confirmation" class="password required">
-                                </div>
-                            </div>
-                            <div class="control-group string required user_telephone"><label for="user_telephone"
-                                                                                             class="string required control-label"><abbr
-                                    title="required">*</abbr> Telephone</label>
-
-                                <div class="controls"><input type="text" size="50" name="user[telephone]"
-                                                             id="user_telephone" class="string required" value="(343) 456-5656"></div>
-                            </div>
-                            <label class="string optional control-label">Select role</label><br>
-
-                            <div class="control-group radio_buttons optional user_role_ids">
-                                <div class="controls"><label class="radio"><input type="radio" value="1"
-                                                                                  name="user[role_ids]"
-                                                                                  id="user_role_ids_1"
-                                                                                  class="radio_buttons optional"
-                                                                                  checked="checked"><span
-                                        class="lbl">Admin</span></label><label class="radio"><input type="radio"
-                                                                                                    value="2"
-                                                                                                    name="user[role_ids]"
-                                                                                                    id="user_role_ids_2"
-                                                                                                    class="radio_buttons optional"
-                                                                                                    ><span
-                                        class="lbl">Business Owner</span></label><label class="radio"><input
-                                        type="radio" value="5" name="user[role_ids]" id="user_role_ids_5"
-                                        class="radio_buttons optional"><span
-                                        class="lbl">Sale Leader</span></label><label class="radio"><input type="radio"
-                                                                                                          value="6"
-                                                                                                          name="user[role_ids]"
-                                                                                                          id="user_role_ids_6"
-                                                                                                          class="radio_buttons optional"
-                                                                                                          ><span
-                                        class="lbl">Sale Staff</span></label></div>
-                            </div>
-                            <!-- combobox
-                            <div class="control-group string optional user_role_ids"><label class="string optional control-label" for="user_role_ids">Role ids</label><div class="controls">
-                                <select id="user_role_ids" name="user[role_ids]"><option value=""></option>
-                        <option value="1">admin</option>
-                        <option value="2">businessOwner</option>
-                        <option value="5">saleLeader</option>
-                        <option value="6">saleStaff</option></select>
-                        </div></div>    -->
-
-                            <!--<input type="submit" value="Create User" name="commit" class="btn btn-primary">-->
-                            <a class="btn btn-primary" href="list_users.html" id="createUserBtn">Update User</a>
-                        </form>
-
-                    </div>
-                    <!--/span-->
-                </div>
-                <!--/row-->
+                <a class="btn btn-primary" href="edit_user.html">Edit</a>
+                <a class="btn btn-primary" href="list_users.html">Back</a>
 
                 <!--PAGE CONTENT ENDS-->
             </div>

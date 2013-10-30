@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>New Client</title>
+    <title>Edit Client</title>
 
     <meta name="description" content="Static &amp; Dynamic Tables"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -605,7 +605,7 @@
 								<i class="icon-angle-right arrow-icon"></i>
 							</span>
         </li>
-        <li class="active">Add Client</li>
+        <li class="active">Edit Client</li>
     </ul>
     <!--.breadcrumb-->
 
@@ -624,7 +624,7 @@
 <div class="page-content">
 <div class="page-header position-relative">
     <h1>
-        New Client
+        Edit Client
     </h1>
 </div>
 <!--/.page-header-->
@@ -645,20 +645,20 @@
 <div class="control-group string optional client_name"><label for="client_name" class="string optional control-label">Name</label>
 
     <div class="controls"><input type="text" size="50" name="client[name]" id="client_name" class="string optional"
-                                 autofocus="autofocus"></div>
+                                 autofocus="autofocus" value="Lam"></div>
 </div>
 <div class="control-group tel required client_phone"><label for="client_phone" class="tel required control-label"><abbr
         title="required">*</abbr> Phone</label>
 
     <div class="controls"><input type="tel" size="50" name="client[phone]" id="client_phone"
-                                 class="string tel required"></div>
+                                 class="string tel required" value="(343) 456-5656"></div>
 </div>
 <div class="control-group email required client_email"><label for="client_email"
                                                               class="email required control-label"><abbr
         title="required">*</abbr> Email</label>
 
     <div class="controls"><input type="email" size="50" name="client[email]" id="client_email"
-                                 class="string email required"></div>
+                                 class="string email required" value="haitrh@test.com"></div>
 </div>
 <div class="control-group country required client_country"><label for="client_country"
                                                                   class="country required control-label"><abbr
@@ -907,7 +907,7 @@
 <option value="Uzbekistan">Uzbekistan</option>
 <option value="Vanuatu">Vanuatu</option>
 <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
-<option value="Viet Nam">Viet Nam</option>
+<option value="Viet Nam" selected="selected">Viet Nam</option>
 <option value="Virgin Islands, British">Virgin Islands, British</option>
 <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
 <option value="Wallis and Futuna">Wallis and Futuna</option>
@@ -920,7 +920,7 @@
                                                               class="string required control-label"><abbr
         title="required">*</abbr> City</label>
 
-    <div class="controls"><input type="text" size="50" name="client[city]" id="client_city" class="string required">
+    <div class="controls"><input type="text" size="50" name="client[city]" id="client_city" class="string required" value="Ha Noi">
     </div>
 </div>
 
@@ -930,7 +930,7 @@
         title="required">*</abbr> Address</label>
 
     <div class="controls"><input type="text" size="50" name="client[location_attributes][address]"
-                                 id="client_location_attributes_address" class="string required"></div>
+                                 id="client_location_attributes_address" class="string required" value="Ha Noi, Viet Nam"></div>
 </div>
 <div class="control-group">
     <label class="string control-label">
@@ -955,7 +955,7 @@
         </label>
 
         <div class="controls">
-            <input type="number" step="1" name="client[age]" id="client_age" class="numeric integer">
+            <input type="number" step="1" name="client[age]" id="client_age" class="numeric integer" value="20">
         </div>
     </div>
 
@@ -967,7 +967,7 @@
                 <input type="radio" value="1"
                        name="user[sex]"
                        id="user_sex_1"
-                       class="radio_buttons optional"><span
+                       class="radio_buttons optional" checked><span
                     class="lbl">Male</span></label>
             <label>
                 <input type="radio"

@@ -5,11 +5,11 @@
     <ignored path="html_prototype.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383042043254" ignored="false" />
-    <file path="/Dummy.txt" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383099710411" ignored="false" />
+    <file path="/Dummy.txt" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383193606443" ignored="false" />
     <file path="/list_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382947777140" ignored="false" />
     <file path="$PROJECT_DIR$/../../ipadapp/app/controllers/application_controller.rb" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382936404925" ignored="false" />
     <file path="/login.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382947313363" ignored="false" />
-    <file path="/new_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383122689109" ignored="false" />
+    <file path="/new_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383193290432" ignored="false" />
     <file path="/edit_user.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383122813093" ignored="false" />
     <file path="$PROJECT_DIR$/../../ipadapp/app/views/users/_form.html.erb" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1382953582102" ignored="false" />
     <file path="/list_clients.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383123106300" ignored="false" />
@@ -29,6 +29,9 @@
     <file path="/sale_rep_statistic.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383191679558" ignored="false" />
     <file path="/admin_statistic.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383185061012" ignored="false" />
     <file path="/user_statistic_detail.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383190473778" ignored="false" />
+    <file path="/list_industries.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383193242954" ignored="false" />
+    <file path="/new_industry.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383193858302" ignored="false" />
+    <file path="/edit_industry.html" changelist="b3cf75ac-4cf7-480c-9e5b-4ae0f1093620" time="1383194003605" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,27 +51,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit_client.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/edit_client.html">
+      <file leaf-file-name="list_industries.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/list_industries.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="937" column="28" selection-start="34317" selection-end="34317" vertical-scroll-proportion="0.365">
+            <state line="659" column="77" selection-start="25817" selection-end="25817" vertical-scroll-proportion="-3.5675676">
               <folding>
-                <marker date="1383192716459" expanded="true" signature="39058:39173" placeholder="..." />
+                <element signature="tag#tr#2;tag#tbody#0;tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#tr#3;tag#tbody#0;tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#tr#4;tag#tbody#0;tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <marker date="1383193242579" expanded="true" signature="28102:28210" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_client.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/new_client.html">
+      <file leaf-file-name="new_industry.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/new_industry.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="939" column="114" selection-start="34251" selection-end="34357" vertical-scroll-proportion="-6.2916665">
+            <state line="8" column="95" selection-start="246" selection-end="246" vertical-scroll-proportion="0.31746033">
               <folding>
-                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1383193858115" expanded="true" signature="19806:19921" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_industry.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/edit_industry.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="566" column="99" selection-start="17193" selection-end="17193" vertical-scroll-proportion="-9.083333">
+              <folding>
+                <marker date="1383194003467" expanded="true" signature="19970:20085" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_user.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/new_user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="14" selection-start="1351" selection-end="1351" vertical-scroll-proportion="-16.583334">
+              <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1383192629983" expanded="true" signature="38937:39052" placeholder="..." />
+                <marker date="1383193290547" expanded="true" signature="26074:26189" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -84,10 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/assets/css/schedules.css" />
-        <option value="$PROJECT_DIR$/public/list_users.html" />
-        <option value="$PROJECT_DIR$/public/new_user.html" />
-        <option value="$PROJECT_DIR$/public/show_user.html" />
         <option value="$PROJECT_DIR$/public/edit_user.html" />
         <option value="$PROJECT_DIR$/public/list_clients.html" />
         <option value="$PROJECT_DIR$/public/list_meetings.html" />
@@ -100,6 +122,10 @@
         <option value="$PROJECT_DIR$/public/show_client.html" />
         <option value="$PROJECT_DIR$/public/new_client.html" />
         <option value="$PROJECT_DIR$/public/edit_client.html" />
+        <option value="$PROJECT_DIR$/public/list_industries.html" />
+        <option value="$PROJECT_DIR$/public/new_user.html" />
+        <option value="$PROJECT_DIR$/public/new_industry.html" />
+        <option value="$PROJECT_DIR$/public/edit_industry.html" />
       </list>
     </option>
   </component>
@@ -112,9 +138,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="64" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1303" />
-    <option name="height" value="745" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -483,18 +509,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="24" width="1303" height="745" extended-state="7" />
+    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.6702786" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25737053" sideWeight="0.7508091" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25737053" sideWeight="0.7616099" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919094" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23839009" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -566,36 +592,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/edit_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="88" selection-end="88" vertical-scroll-proportion="0.14814815">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/list_clients.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="360" column="39" selection-start="11208" selection-end="11208" vertical-scroll-proportion="0.2112676" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/list_meetings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="54" selection-end="54" vertical-scroll-proportion="0.11111111" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/new_schedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="786" column="44" selection-start="25113" selection-end="25113" vertical-scroll-proportion="0.628169">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/list_schedules.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="45" selection-start="371" selection-end="371" vertical-scroll-proportion="0.42056075" />
@@ -691,22 +687,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/new_client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="939" column="114" selection-start="34251" selection-end="34357" vertical-scroll-proportion="-6.2916665">
+        <state line="939" column="114" selection-start="34251" selection-end="34357" vertical-scroll-proportion="0.35280374">
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1383192629983" expanded="true" signature="38937:39052" placeholder="..." />
+            <marker date="1383192629983" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/edit_client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="937" column="28" selection-start="34317" selection-end="34317" vertical-scroll-proportion="0.365">
+        <state line="946" column="48" selection-start="34983" selection-end="34983" vertical-scroll-proportion="0.65654206">
           <folding>
-            <marker date="1383192716459" expanded="true" signature="39058:39173" placeholder="..." />
+            <marker date="1383192716459" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/list_industries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="659" column="77" selection-start="25817" selection-end="25817" vertical-scroll-proportion="-3.5675676">
+          <folding>
+            <element signature="tag#tr#2;tag#tbody#0;tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#tr#3;tag#tbody#0;tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#tr#4;tag#tbody#0;tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <marker date="1383193242579" expanded="true" signature="28102:28210" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/new_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="14" selection-start="1351" selection-end="1351" vertical-scroll-proportion="-16.583334">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383193290547" expanded="true" signature="26074:26189" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/edit_industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="566" column="99" selection-start="17193" selection-end="17193" vertical-scroll-proportion="-9.083333">
+          <folding>
+            <marker date="1383194003467" expanded="true" signature="19970:20085" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/new_industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="95" selection-start="246" selection-end="246" vertical-scroll-proportion="0.31746033">
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1383193858115" expanded="true" signature="19806:19921" placeholder="..." />
           </folding>
         </state>
       </provider>
